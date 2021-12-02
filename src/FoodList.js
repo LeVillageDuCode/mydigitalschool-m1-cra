@@ -4,9 +4,9 @@ import './FoodList.css'
 
 export default function FoodList() {
     const [foodItems, setFoodItems] = useState([
-        {title: 'Framoge', quantity: '200g'},
-        {title: 'Jambon', quantity: '2 tranches'},
-        {title: 'Pizza', quantity: '3 parts'}
+        {title: 'Framoge'},
+        {title: 'Jambon'},
+        {title: 'Pizza'}
     ])
 
     const [foodInput, setFoodInput] = useState("")
@@ -20,7 +20,7 @@ export default function FoodList() {
             <input type="text" value={foodInput} onChange={handleFoodInput} />
             <ul>
                 {foodItems.map(foodItem => (
-                    <FoodItem title={foodItem.title} quantity={foodItem.quantity} />
+                    <FoodItem title={foodItem.title} quantity="100g" />
                 ))}
 
                 <li className="adding">En cours d'ajout: {foodInput} </li>
