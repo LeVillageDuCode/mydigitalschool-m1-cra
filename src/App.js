@@ -23,9 +23,9 @@ function App() {
       {/* <h1 onClick={hellow}>{title}</h1>
 
       <MyNav /> */}
-      <FoodList />
+      {/* <FoodList /> */}
 
-      {/* <Form /> */}
+      <Form />
     </div>
   );
 }

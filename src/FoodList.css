@@ -1,0 +1,11 @@
+.foodItems {
+    padding: 20px;
+    border:2px solid red;
+    margin: 10px;
+}
+
+.adding {
+    font-size: 0.75rem;
+    color: grey;
+    font-style: italic;
+}

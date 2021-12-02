@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import FoodItem from './FoodItem'
+import './FoodList.css'
 
 export default function FoodList() {
     const [foodItems, setFoodItems] = useState([
-        {id: 1, title: 'Framoge', quantity: '200g'},
-        {id: 2, title: 'Jambon', quantity: '2 tranches'},
-        {id: 3, title: 'Pizza', quantity: '3 parts'}
+        {title: 'Framoge', quantity: '200g'},
+        {title: 'Jambon', quantity: '2 tranches'},
+        {title: 'Pizza', quantity: '3 parts'}
     ])
 
     const [foodInput, setFoodInput] = useState("")
@@ -21,7 +22,8 @@ export default function FoodList() {
                 {foodItems.map(foodItem => (
                     <FoodItem title={foodItem.title} quantity={foodItem.quantity} />
                 ))}
-                <li>En cours d'ajout: {foodInput} </li>
+
+                <li className="adding">En cours d'ajout: {foodInput} </li>
             </ul>
         </div>
     )
