@@ -19,11 +19,10 @@ function App() {
 
   return (
     <div className="App">
-      {/* <h1 onClick={hellow}>{title}</h1>
+      <h1 onClick={hellow}>{title}</h1>
 
       <MyNav />
-      <FoodList /> */}
-      <PlayerList/>
+      <FoodList />
     </div>
   );
 }

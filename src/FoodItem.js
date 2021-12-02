@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-function FoodItem({title}) {
+function FoodItem({title, quantity}) {
     let [count, setCount] = useState(0);
 
     function incrementCount(event) {
@@ -9,7 +9,7 @@ function FoodItem({title}) {
     }
 
     return (
-        <li>{title}
+        <li>{title} {quantity}
             <button onClick={incrementCount}>Ajouté {count} fois</button>
         </li>
     )
