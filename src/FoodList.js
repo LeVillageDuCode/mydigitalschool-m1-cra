@@ -8,12 +8,21 @@ export default function FoodList() {
         {id: 3, title: 'Pizza', quantity: '3 parts'}
     ])
 
+    const [foodInput, setFoodInput] = useState("")
+
+    function handleFoodInput(e) {
+        setFoodInput(e.target.value)
+    }
 
     return (
-        <ul>
-            {foodItems.map(foodItem => (
-                <FoodItem title={foodItem.title} quantity={foodItem.quantity} />
-            ))}
-        </ul>
+        <div className="foodItems">
+            <input type="text" value={foodInput} onChange={handleFoodInput} />
+            <ul>
+                {foodItems.map(foodItem => (
+                    <FoodItem title={foodItem.title} quantity={foodItem.quantity} />
+                ))}
+                <li>En cours d'ajout: {foodInput} </li>
+            </ul>
+        </div>
     )
 }

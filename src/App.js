@@ -4,6 +4,7 @@ import FoodList from './FoodList';
 
 import {useState} from 'react';
 import PlayerList from './PlayerList';
+import Form from './Form';
 
 
 function App() {
@@ -19,10 +20,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1 onClick={hellow}>{title}</h1>
+      {/* <h1 onClick={hellow}>{title}</h1>
 
-      <MyNav />
+      <MyNav /> */}
       <FoodList />
+
+      {/* <Form /> */}
     </div>
   );
 }
