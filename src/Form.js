@@ -24,9 +24,24 @@ export default function Form() {
 
     }
 
+    // let isVisible;
+    // if(firstname === "") {
+    //     isVisible = <span>Pas d'ajout en cours!</span>
+    // }
+    // else {
+    //     isVisible =  <h3>Utilisateur en cours d'ajout: {firstname} </h3>
+    // }
+
+    // const isVisible = firstname === "" ?
+    //     <span>Pas d'ajout en cours!</span>
+    //     : <h3>Utilisateur en cours d'ajout: {firstname} </h3>
+
     return (
         <div className="form">
-            <h2>Mon formulaire: {firstname}  </h2>
+            <h2>Mon formulaire   </h2>
+            {firstname === "" ?
+                <span>Pas d'ajout en cours!</span>
+                : <h3>Utilisateur en cours d'ajout: {firstname} </h3>}
 
             <form onSubmit={handleSubmit}>
                 <input type="text" value={firstname} onChange={handleFirstname} />
